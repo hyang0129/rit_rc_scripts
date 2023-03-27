@@ -3,13 +3,13 @@
 #SBATCH --job-name=testJob		# Name for your job
 #SBATCH --comment="Testing Job"		# Comment for your job
 
-#SBATCH --account=rc-help		# Project account to run your job under
+#SBATCH --account=texamm		# Project account to run your job under
 #SBATCH --partition=debug		# Partition to run your job on
 
 #SBATCH --output=%x_%j.out		# Output file
 #SBATCH --error=%x_%j.err		# Error file
 
-#SBATCH --mail-user=abc1234@rit.edu	# Email address to notify
+#SBATCH --mail-user=hy3134@rit.edu	# Email address to notify
 #SBATCH --mail-type=END			# Type of notification emails to send
 
 #SBATCH --time=0-00:05:00		# Time limit
