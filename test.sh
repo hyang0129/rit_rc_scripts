@@ -3,7 +3,7 @@
 #SBATCH --job-name=testJob		# Name for your job
 #SBATCH --comment="Testing Job"		# Comment for your job
 
-#SBATCH --account=texamm		# Project account to run your job under
+#SBATCH --account=ngafid		# Project account to run your job under
 #SBATCH --partition=debug		# Partition to run your job on
 
 #SBATCH --output=%x_%j.out		# Output file
