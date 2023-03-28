@@ -18,4 +18,12 @@
 #SBATCH --cpus-per-task=2		# Number of CPUs per task
 #SBATCH --mem-per-cpu=10g		# Memory per CPU
 
+
+echo "Hello World"
+
 hostname				# Run the command hostname
+
+spack load /4oiwjzp
+
+jupyter notebook --ip=0.0.0.0 --no-browser
+
