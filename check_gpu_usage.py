@@ -40,10 +40,10 @@ def write_log(path_to_log = 'gpu_util.log', gpu_index = 0):
     df = pd.DataFrame(data)
 
     if not os.path.exists(path_to_log):
-        df.to_csv(path = path_to_log, index=False, header=False)
+        df.to_csv(path_to_log, index=False, header=False)
 
     else:
-        df.to_csv(path = path_to_log, mode='a', index=False, header=False)
+        df.to_csv(path_to_log, mode='a', index=False, header=False)
 
 
 def check_utilization_loop(path_to_log = 'gpu_util.log', gpu_index = 0):
