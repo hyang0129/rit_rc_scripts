@@ -12,11 +12,15 @@ while not sent:
 
     files = glob.glob('*.err')
 
+
     with open(files[0], 'r') as errlog:
 
         lines = errlog.read()
 
         for line in lines:
+
+            print(lines)
+
             if 'rc.rit' in line:
 
                 splits = line.split('/')
