@@ -8,7 +8,7 @@ import glob
 sent = False
 while not sent:
 
-    time.sleep(10)
+    time.sleep(1)
 
     files = glob.glob('*.err')
 
