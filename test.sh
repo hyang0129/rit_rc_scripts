@@ -27,7 +27,13 @@ hostname				# Run the command hostname
 
 echo "Loading Spack Package"
 
-spack load /4oiwjzp
+spack load gcc
+spack load /4oiwjzp # jupyter server w py3.10
+spack load /mwfp7xe # cuda 11.7
+
+
+
+
 
 echo "Launcher Jupyter Server"
 jupyter notebook --ip=0.0.0.0 --no-browser &
