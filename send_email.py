@@ -34,7 +34,7 @@ while not sent:
                 base_command = f'ssh -i .ssh/rit_rc_key hy3134@sporcsubmit.rc.rit.edu -L {port}:{host}:{port}'
 
 
-                url = line.split(' ')[-1].replace('{host}.rc.rit.edu', '127.0.0.1')
+                url = line.split(' ')[-1].replace(f'{host}.rc.rit.edu', '127.0.0.1')
 
 
                 # set your email and password
