@@ -6,8 +6,8 @@
 #SBATCH --account=ngafid		# Project account to run your job under
 #SBATCH --partition=debug		# Partition to run your job on
 
-#SBATCH --output=output_logs/%x_%j.out		# Output file
-#SBATCH --error=error_logs/%x_%j.err		# Error file
+#SBATCH --output=%x_%j.out		# Output file
+#SBATCH --error=%x_%j.err		# Error file
 
 #SBATCH --mail-user=hy3134@rit.edu	# Email address to notify
 #SBATCH --mail-type=END			# Type of notification emails to send
