@@ -38,7 +38,7 @@ jupyter notebook --ip=0.0.0.0 --no-browser &
 echo "Running GPU Usage Check"
 python check_gpu_usage.py
 
-echo
+echo 'Exiting Due to Insufficient GPU Usage'
 
 
 
