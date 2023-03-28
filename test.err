@@ -1,6 +1,0 @@
-[I 14:10:52.882 NotebookApp] Serving notebooks from local directory: /home/hy3134/rit_rc_scripts
-[I 14:10:52.882 NotebookApp] Jupyter Notebook 6.4.12 is running at:
-[I 14:10:52.883 NotebookApp] http://skl-a-47.rc.rit.edu:8888/?token=0ccbd2ad9275048f800146cecf17bb268cf6e96a28bc0635
-[I 14:10:52.883 NotebookApp]  or http://127.0.0.1:8888/?token=0ccbd2ad9275048f800146cecf17bb268cf6e96a28bc0635
-[I 14:10:52.883 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[C 14:10:52.886 NotebookApp]
