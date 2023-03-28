@@ -14,9 +14,10 @@
 
 #SBATCH --time=0-00:05:00		# Time limit
 #SBATCH --nodes=1			# How many nodes to run on
-#SBATCH --ntasks=2			# How many tasks per node
-#SBATCH --cpus-per-task=2		# Number of CPUs per task
+#SBATCH --ntasks=1			# How many tasks per node
+#SBATCH --cpus-per-task=4		# Number of CPUs per task
 #SBATCH --mem-per-cpu=10g		# Memory per CPU
+#SBATCH --gres=gpu:a100:1
 
 
 echo "Hello World"
@@ -26,4 +27,6 @@ hostname				# Run the command hostname
 spack load /4oiwjzp
 
 jupyter notebook --ip=0.0.0.0 --no-browser
+
+
 
