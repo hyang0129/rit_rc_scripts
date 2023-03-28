@@ -27,7 +27,7 @@ def check_device_stats(index = 0):
     return mem_free, mem_total, gpu_util, mem_util, to_print
 
 
-def write_log(path_to_log = 'gpu_util.log', gpu_index = 0):
+def write_log(path_to_log = 'gpu_util.log', gpu_index = 0, first = False):
 
     mem_free, mem_total, gpu_util, mem_util, to_print = check_device_stats(gpu_index)
 
@@ -39,7 +39,7 @@ def write_log(path_to_log = 'gpu_util.log', gpu_index = 0):
 
     df = pd.DataFrame(data)
 
-    if not os.path.exists(path_to_log):
+    if not os.path.exists(path_to_log) or first:
         df.to_csv(path_to_log, index=False, header=True)
 
     else:
@@ -47,6 +47,7 @@ def write_log(path_to_log = 'gpu_util.log', gpu_index = 0):
 
 
 def check_utilization_loop(path_to_log = 'gpu_util.log', gpu_index = 0):
+    write_log(path_to_log, gpu_index, first = True)
 
     gpu_in_use = True
 
@@ -56,8 +57,6 @@ def check_utilization_loop(path_to_log = 'gpu_util.log', gpu_index = 0):
         write_log(path_to_log, gpu_index)
 
         data = pd.read_csv(path_to_log).tail(31)
-
-
 
         max_utilization = data.gpu_util.max()
 
