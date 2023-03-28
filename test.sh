@@ -4,7 +4,7 @@
 #SBATCH --comment="Testing Job"		# Comment for your job
 
 #SBATCH --account=ngafid		# Project account to run your job under
-#SBATCH --partition=debug		# Partition to run your job on
+#SBATCH --partition=tier3		# Partition to run your job on
 
 #SBATCH --output=%x_%j.out		# Output file
 #SBATCH --error=%x_%j.err		# Error file
