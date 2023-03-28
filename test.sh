@@ -20,15 +20,26 @@
 #SBATCH --gres=gpu:a100:1
 
 
-echo "Hello World"
+echo "Setting Up Jupyter Server"
 
 hostname				# Run the command hostname
 
+echo "Loading Spack Package"
+
 spack load /4oiwjzp
 
+echo "Installing Requirements"
+
+pip install -r requirements.txt
+
+echo "Launcher Jupyter Server"
 jupyter notebook --ip=0.0.0.0 --no-browser &
 
-echo "Hello World"
+echo "Running GPU Usage Check"
+python check_gpu_usage.py
+
+echo
+
 
 
 
