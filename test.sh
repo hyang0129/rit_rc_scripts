@@ -41,14 +41,15 @@ jupyter notebook --ip=0.0.0.0 --no-browser &
 echo "Installing Requirements"
 pip install -r requirements.txt
 
-echo "Running loop to send email"
-python send_email.py
+#echo "Running loop to send email"
+#python send_email.py
 
-echo "Running GPU Usage Check"
-python check_gpu_usage.py
+#echo "Running GPU Usage Check"
+#python check_gpu_usage.py
 
-echo 'Exiting Due to Insufficient GPU Usage'
+#echo 'Exiting Due to Insufficient GPU Usage'
 
+sleep(600)
 
 
 
