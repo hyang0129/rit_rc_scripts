@@ -28,5 +28,7 @@ spack load /4oiwjzp
 
 jupyter notebook --ip=0.0.0.0 --no-browser
 
+echo "Hello World"
+
 
 
