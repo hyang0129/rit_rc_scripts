@@ -26,9 +26,10 @@ hostname				# Run the command hostname
 
 spack load /4oiwjzp
 
-jupyter notebook --ip=0.0.0.0 --no-browser
+jupyter notebook --ip=0.0.0.0 --no-browser &
 
 echo "Hello World"
+
 
 
 
