@@ -8,6 +8,8 @@ import glob
 sent = False
 while not sent:
 
+    time.sleep(10)
+
     files = glob.glob('*.err')
 
     with open(files[0], 'r') as errlog:
