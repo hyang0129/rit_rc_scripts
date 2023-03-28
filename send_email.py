@@ -6,20 +6,18 @@ import glob
 
 
 sent = False
+
 while not sent:
 
     time.sleep(1)
 
     files = glob.glob('*.err')
 
-
     with open(files[0], 'r') as errlog:
 
-        lines = errlog.read()
+        lines = errlog.readlines()
 
         for line in lines:
-
-            print(lines)
 
             if 'rc.rit' in line:
 
@@ -51,13 +49,14 @@ while not sent:
                 msg['To'] = "hooong.yang@gmail.com"
                 msg.set_content(f"""
                 {base_command}
-                {url}              
+                {url}
                 """)
 
                 # send email
                 with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
                     smtp.login(email_address, email_password)
                     smtp.send_message(msg)
+
 
 
                 sent = True
