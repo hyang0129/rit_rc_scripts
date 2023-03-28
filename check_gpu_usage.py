@@ -40,7 +40,7 @@ def write_log(path_to_log = 'gpu_util.log', gpu_index = 0):
     df = pd.DataFrame(data)
 
     if not os.path.exists(path_to_log):
-        df.to_csv(path_to_log, index=False, header=False)
+        df.to_csv(path_to_log, index=False, header=True)
 
     else:
         df.to_csv(path_to_log, mode='a', index=False, header=False)
@@ -57,8 +57,9 @@ def check_utilization_loop(path_to_log = 'gpu_util.log', gpu_index = 0):
 
         data = pd.read_csv(path_to_log).tail(31)
 
-        max_utilization = data.gpu_util.max()
 
+
+        max_utilization = data.gpu_util.max()
 
         if len(data) > 30 and max_utilization < 0.1:
             gpu_in_use is False
