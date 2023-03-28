@@ -31,11 +31,11 @@ def write_log(path_to_log = 'gpu_util.log', gpu_index = 0):
 
     mem_free, mem_total, gpu_util, mem_util, to_print = check_device_stats(gpu_index)
 
-    data = {'mem_free' : mem_free,
+    data =[ {'mem_free' : mem_free,
             'mem_total' : mem_total,
             'gpu_util' : gpu_util,
             'mem_util' : mem_util,
-            'datetime' : pd.Timestamp.now() }
+            'datetime' : pd.Timestamp.now() }]
 
     df = pd.DataFrame(data)
 
