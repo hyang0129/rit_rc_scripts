@@ -38,8 +38,8 @@ spack env activate engl-581-2
 echo "Launcher Jupyter Server"
 jupyter notebook --ip=0.0.0.0 --no-browser &
 
-echo "Installing Requirements"
-pip install -r requirements.txt
+#echo "Installing Requirements"
+#pip install -r requirements.txt
 
 #echo "Running loop to send email"
 #python send_email.py
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 #echo 'Exiting Due to Insufficient GPU Usage'
 
-sleep(600)
+sleep 600
 
 
 
