@@ -27,9 +27,9 @@ hostname				# Run the command hostname
 
 echo "Loading Spack Package"
 
-spack load /4uiyuqf # gcc 10.1
+spack load /3iqvxwv # gcc 11.2
 spack load /4oiwjzp # jupyter server w py3.10
-spack load /mwfp7xe # cuda 11.7
+spack load /d2vb2gc # cuda 11.7
 
 
 
