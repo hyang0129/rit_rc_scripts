@@ -32,7 +32,7 @@ echo "Loading Spack Package"
 #spack load /dr4ipev # gcc 12.2
 #
 
-spack env activate engl-581-2
+spack env activate engl-581-22102601
 
 
 echo "Launcher Jupyter Server"
