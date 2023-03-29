@@ -49,7 +49,7 @@ jupyter notebook --ip=0.0.0.0 --no-browser &
 
 #echo 'Exiting Due to Insufficient GPU Usage'
 
-sleep 600
+sleep 7200
 
 
 
