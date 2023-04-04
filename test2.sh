@@ -19,36 +19,19 @@
 #SBATCH --mem-per-cpu=10g		# Memory per CPU
 #SBATCH --gres=gpu:a100:1
 
+
 echo "Setting Up Jupyter Server"
 
-hostname				# Run the command hostname
+echo "Loading Packages"
 
-echo "Loading Spack Package"
+source ~/conda/etc/profile.d/conda.sh
+conda activate
 
-#spack load /4oiwjzp # jupyter server w py3.10
-#spack load /igzaycn # cuda 11.8
-#spack load /dr4ipev # gcc 12.2
-#
+spack load /igzaycn # cuda 11.8
+spack load /dr4ipev # gcc 12.2
 
-spack env activate engl-581-22102601
-spack load
 
-echo "Launcher Jupyter Server"
+echo "Launching Jupyter Server"
 jupyter notebook --ip=0.0.0.0 --no-browser &
 
-#echo "Installing Requirements"
-#pip install -r requirements.txt
-
-#echo "Running loop to send email"
-#python send_email.py
-
-#echo "Running GPU Usage Check"
-#python check_gpu_usage.py
-
-#echo 'Exiting Due to Insufficient GPU Usage'
-
 sleep 7200
-
-
-
-
