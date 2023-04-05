@@ -38,6 +38,6 @@ spack load /dr4ipev # gcc 12.2
 
 
 echo "Launching Jupyter Server"
-jupyter notebook --ip=0.0.0.0 --no-browser &
+jupyter lab --ip=0.0.0.0 --no-browser &
 
 sleep 7200
