@@ -38,4 +38,4 @@ spack load /dr4ipev # gcc 12.2
 
 
 echo "Launching Jupyter Server"
-jupyter lab --ip=0.0.0.0 --no-browser -port 8889
+jupyter lab --ip=0.0.0.0 --no-browser -port=8889
