@@ -19,6 +19,7 @@
 #SBATCH --mem-per-cpu=10g		# Memory per CPU
 #SBATCH --gres=gpu:a100:1
 
+#
 
 echo "Setting Up Jupyter Server"
 
