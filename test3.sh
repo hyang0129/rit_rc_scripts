@@ -3,7 +3,7 @@
 #SBATCH --job-name=testJob		# Name for your job
 #SBATCH --comment="Testing Job"		# Comment for your job
 
-#SBATCH --account=ngafid		# Project account to run your job under
+#SBATCH --account=icmab		# Project account to run your job under
 #SBATCH --partition=tier3		# Partition to run your job on
 
 #SBATCH --output=%x_%j.out		# Output file
@@ -18,8 +18,6 @@
 #SBATCH --cpus-per-task=4		# Number of CPUs per task
 #SBATCH --mem-per-cpu=10g		# Memory per CPU
 #SBATCH --gres=gpu:a100:1
-
-#
 
 echo "Setting Up Jupyter Server"
 
@@ -39,4 +37,4 @@ spack load /dr4ipev # gcc 12.2
 
 
 echo "Launching Jupyter Server"
-jupyter lab --ip=0.0.0.0 --no-browser --port=8889
+jupyter lab --ip=0.0.0.0 --no-browser --port=8888
