@@ -23,7 +23,7 @@ echo "Setting Up Jupyter Server"
 
 echo "Loading Packages"
 
-source ~/conda/etc/profile.d/conda.shtest6.sh
+source ~/conda/etc/profile.d/conda.sh
 conda activate
 
 export XLA_FLAGS=--xla_gpu_cuda_data_dir=/home/hy3134/conda/lib
