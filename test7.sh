@@ -40,4 +40,4 @@ spack load /igzaycn # cuda 11.8
 spack load gcc@11.2.0
 
 echo "Launching Jupyter Server"
-jupyter lab --ip=0.0.0.0 --no-browser --port=8888
+jupyter lab --ip=0.0.0.0 --no-browser --port=8887
