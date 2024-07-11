@@ -40,4 +40,4 @@ spack load /t7uxsmp # gcc 11.2 seems to already be loaded but needs to be explic
 #spack load gcc@11.2.0
 
 echo "Launching Jupyter Server"
-jupyter lab --ip=0.0.0.0 --no-browser --port=8887
+jupyter lab --ip=0.0.0.0 --no-browser --port=8886
