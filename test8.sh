@@ -35,9 +35,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib
 spack load /igzaycn # cuda 11.8
 #spack load /dr4ipev # gcc 12.2
 
-spack load /t7uxsmp # gcc 11.2 seems to already be loaded but needs to be explicity reloaded
+#spack load /t7uxsmp # gcc 11.2 seems to already be loaded but needs to be explicity reloaded
 
-#spack load gcc@11.2.0
+spack load gcc@11.2.0
 
 echo "Launching Jupyter Server"
 jupyter lab --ip=0.0.0.0 --no-browser --port=8886
