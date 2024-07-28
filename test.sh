@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-#SBATCH --job-name=nbserversmallgpu		# Name for your job
+#SBATCH --job-name=nb8800s	Name for your job
 #SBATCH --comment="Testing Job"		# Comment for your job
 
 #SBATCH --account=icmab		# Project account to run your job under
@@ -37,4 +37,4 @@ spack load /dr4ipev # gcc 12.2
 
 
 echo "Launching Jupyter Server"
-jupyter lab --ip=0.0.0.0 --no-browser --port=8888
+jupyter lab --ip=0.0.0.0 --no-browser --port=8800
