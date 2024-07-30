@@ -42,8 +42,12 @@ spack load gcc@11.2.0
 #echo "Launching Jupyter Server"
 #jupyter lab --ip=0.0.0.0 --no-browser --port=8886
 
+echo "[Begin Tasks]"
+
 cd notebook_noself/ProblematicSelfSupervisedOOD/lmd/
 
 !python main.py --workdir results/cars_adj_0/ --config configs/adj/cars_configs_0_id.py --mode train
 
 !python main.py --workdir results/cars_adj_1/ --config configs/adj/cars_configs_1_id.py --mode train
+
+echo "[Finished Tasks]"
