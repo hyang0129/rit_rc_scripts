@@ -46,8 +46,7 @@ echo "[Begin Tasks]"
 
 cd notebook_noself/ProblematicSelfSupervisedOOD/lmd/
 
-python main.py --workdir results/cars_adj_0/ --config configs/adj/cars_configs_0_id.py --mode train
+python main.py --workdir results/cifar10_adj_4/ --config configs/adj/cifar10_configs_4_id.py --mode train
 
-python main.py --workdir results/cars_adj_1/ --config configs/adj/cars_configs_1_id.py --mode train
 
 echo "[Finished Tasks]"

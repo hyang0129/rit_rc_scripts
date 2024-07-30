@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-#SBATCH --job-name=cars_train_1	# Name for your job
+#SBATCH --job-name=cars_train_2	# Name for your job
 #SBATCH --comment="Testing Job"		# Comment for your job
 
 #SBATCH --account=icmab		# Project account to run your job under
@@ -46,8 +46,8 @@ echo "[Begin Tasks]"
 
 cd notebook_noself/ProblematicSelfSupervisedOOD/lmd/
 
-python main.py --workdir results/cars_adj_0/ --config configs/adj/cars_configs_0_id.py --mode train
+python main.py --workdir results/cars_adj_2/ --config configs/adj/cars_configs_2_id.py --mode train
 
-python main.py --workdir results/cars_adj_1/ --config configs/adj/cars_configs_1_id.py --mode train
+python main.py --workdir results/cars_adj_3/ --config configs/adj/cars_configs_3_id.py --mode train
 
 echo "[Finished Tasks]"
