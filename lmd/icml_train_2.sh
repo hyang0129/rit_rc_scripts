@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-#SBATCH --job-name=cars_recon		# Name for your job
+#SBATCH --job-name=cars_train_2	# Name for your job
 #SBATCH --comment="Testing Job"		# Comment for your job
 
 #SBATCH --account=icmab		# Project account to run your job under
@@ -42,13 +42,12 @@ spack load gcc@11.2.0
 #echo "Launching Jupyter Server"
 #jupyter lab --ip=0.0.0.0 --no-browser --port=8886
 
+echo "[Begin Tasks]"
+
 cd notebook_noself/ProblematicSelfSupervisedOOD/lmd/
 
+python main.py --workdir results/icmlface_adj_1/ --config configs/adj/icmlface_configs_1_id.py --mode train
 
-python recon.py --config configs/adj/icmlface_configs_0_id.py \
-  --ckpt_path results/icmlface_adj_0/checkpoints/checkpoint_129.pth --in_domain CIFAR10 \
-  --out_of_domain SVHN --batch_size 200 --mask_type checkerboard_alt --mask_num_blocks 8 \
-  --reps_per_image 10 --workdir results/cifar10/CIFAR10_vs_SVHN
+python main.py --workdir results/cars_adj_3/ --config configs/adj/cars_configs_3_id.py --mode train
 
-
-!python main.py --workdir results/cars_adj_0/ --config configs/adj/cars_configs_0_id.py --mode train
+echo "[Finished Tasks]"
