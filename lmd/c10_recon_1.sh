@@ -47,10 +47,10 @@ cd notebook_noself/ProblematicSelfSupervisedOOD/lmd/
 
 
 
-python recon.py --config configs/adj/cars_configs_0_id.py\
-  --ckpt_path results/cars_adj_0/checkpoints/checkpoint_60.pth --in_domain ADJ \
+python recon.py --config configs/adj/cifar10_configs_1_id.py\
+  --ckpt_path results/cifar10_adj_1/checkpoints/checkpoint_109.pth --in_domain ADJ \
   --out_of_domain ADJ --batch_size 50 --mask_type checkerboard_alt --mask_num_blocks 8 \
-  --reps_per_image 10 --workdir results/cars_adj_0/ID_vs_OOD/
+  --reps_per_image 10 --workdir results/cifar10_adj_1/ID_vs_OOD/
 
 
 echo '[Finished Tasks]'

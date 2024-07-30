@@ -1,6 +1,5 @@
 #!/bin/bash -l
 
-#SBATCH --job-name=cars_train_2	# Name for your job
 #SBATCH --comment="Testing Job"		# Comment for your job
 
 #SBATCH --account=icmab		# Project account to run your job under
