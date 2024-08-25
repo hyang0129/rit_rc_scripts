@@ -47,10 +47,10 @@ cd notebook_noself/ProblematicSelfSupervisedOOD/lmd/
 
 
 
-python recon.py --config configs/adj/food_configs_1_id.py\
-  --ckpt_path results/food_adj_1/checkpoints/checkpoint_60.pth --in_domain ADJ \
+python recon.py --config configs/adj/food_configs_2_id.py\
+  --ckpt_path results/food_adj_2/checkpoints/checkpoint_60.pth --in_domain ADJ \
   --out_of_domain ADJ --batch_size 50 --mask_type checkerboard_alt --mask_num_blocks 8 \
-  --reps_per_image 10 --workdir results/food_adj_1/ID_vs_OOD/
+  --reps_per_image 10 --workdir results/food_adj_2/ID_vs_OOD/
 
 
 echo '[Finished Tasks]'
