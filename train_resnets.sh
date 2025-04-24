@@ -46,6 +46,18 @@ echo '[Begin Tasks]'
 cd notebook_split_ood/SubclassOOD/OpenOOD-main/
 
 
+for i in "" "_1" "_2" "_3" "_4"; do
+    python train_cross_entropy.py --dataset "yoga$i" --training_method base
+done
+
+for i in "" "_1" "_2" "_3" "_4"; do
+    python train_cross_entropy.py --dataset "rock$i" --training_method base
+done
+
+for i in "" "_1" "_2" "_3" "_4"; do
+    python train_cross_entropy.py --dataset "eurosat$i" --training_method base
+done
+
 
 
 echo '[Finished Tasks]'
