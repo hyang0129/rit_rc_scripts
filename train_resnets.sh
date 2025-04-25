@@ -18,6 +18,8 @@
 #SBATCH --mem-per-cpu=10g		# Memory per CPU
 #SBATCH --gres=gpu:a100:1
 
+start_time=$(date +%s)
+
 echo "Setting Up Jupyter Server"
 
 echo "Loading Packages"
@@ -58,6 +60,13 @@ for i in "" "_1" "_2" "_3" "_4"; do
     python train_cross_entropy.py --dataset "eurosat$i" --training_method base
 done
 
+# End time
+end_time=$(date +%s)
+
+# Calculate duration
+duration=$((end_time - start_time))
+
+echo "Execution time: ${duration} seconds"
 
 
 echo '[Finished Tasks]'
