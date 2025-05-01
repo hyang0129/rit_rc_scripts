@@ -18,6 +18,7 @@
 #SBATCH --mem-per-cpu=10g		# Memory per CPU
 #SBATCH --gres=gpu:a100:1
 
+
 start_time=$(date +%s)
 
 echo "Setting Up Jupyter Server"
@@ -49,16 +50,17 @@ cd notebook_split_ood/SubclassOOD/OpenOOD-main/
 
 
 for i in "" "_1" "_2" "_3" "_4"; do
-    python train_cross_entropy.py --dataset "yoga$i" --training_method dino
+    python evaluate_domain_filtering.py --dataset "fashion$i" --training_method base --network resnet
 done
 
 for i in "" "_1" "_2" "_3" "_4"; do
-    python train_cross_entropy.py --dataset "rock$i" --training_method dino
+    python evaluate_domain_filtering.py --dataset "plant$i" --training_method base --network resnet
 done
 
 for i in "" "_1" "_2" "_3" "_4"; do
-    python train_cross_entropy.py --dataset "eurosat$i" --training_method dino
+    python evaluate_domain_filtering.py --dataset "food$i" --training_method base --network resnet
 done
+
 
 
 
@@ -69,6 +71,5 @@ end_time=$(date +%s)
 duration=$((end_time - start_time))
 
 echo "Execution time: ${duration} seconds"
-
 
 echo '[Finished Tasks]'

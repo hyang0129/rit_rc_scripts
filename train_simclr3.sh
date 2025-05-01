@@ -49,17 +49,16 @@ cd notebook_split_ood/SubclassOOD/OpenOOD-main/
 
 
 for i in "" "_1" "_2" "_3" "_4"; do
-    python train_cross_entropy.py --dataset "yoga$i" --training_method dino
+    python train_cross_entropy.py --dataset "fashion$i" --training_method simclr
 done
 
 for i in "" "_1" "_2" "_3" "_4"; do
-    python train_cross_entropy.py --dataset "rock$i" --training_method dino
+    python train_cross_entropy.py --dataset "plant$i" --training_method simclr
 done
 
 for i in "" "_1" "_2" "_3" "_4"; do
-    python train_cross_entropy.py --dataset "eurosat$i" --training_method dino
+    python train_cross_entropy.py --dataset "food$i" --training_method simclr
 done
-
 
 
 # End time

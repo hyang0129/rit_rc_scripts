@@ -60,14 +60,6 @@ for i in "" "_1" "_2" "_3" "_4"; do
     python train_cross_entropy.py --dataset "eurosat$i" --training_method simclr
 done
 
-for i in "" "_1" "_2" "_3" "_4"; do
-    python train_cross_entropy.py --dataset "colon$i" --training_method simclr
-done
-
-for i in "" "_1" "_2" "_3" "_4"; do
-    python train_cross_entropy.py --dataset "tissue$i" --training_method simclr
-done
-
 
 # End time
 end_time=$(date +%s)
