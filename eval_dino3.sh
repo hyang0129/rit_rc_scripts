@@ -49,13 +49,6 @@ echo '[Begin Tasks]'
 cd notebook_split_ood/SubclassOOD/OpenOOD-main/
 
 
-for i in "" "_1" "_2" "_3" "_4"; do
-    python evaluate_domain_filtering.py --dataset "food$i" --training_method base --network dinov2
-done
-
-for i in "" "_1" "_2" "_3" "_4"; do
-    python evaluate_domain_filtering.py --dataset "plant$i" --training_method base --network dinov2
-done
 
 for i in "" "_1" "_2" "_3" "_4"; do
     python evaluate_domain_filtering.py --dataset "fashion$i" --training_method base --network dinov2

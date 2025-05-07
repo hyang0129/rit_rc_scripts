@@ -11,7 +11,7 @@
 #SBATCH --mail-user=hy3134@rit.edu	# Email address to notify
 #SBATCH --mail-type=END			# Type of notification emails to send
 
-#SBATCH --time=0-72:00:00		# Time limit
+#SBATCH --time=0-24:00:00		# Time limit
 #SBATCH --nodes=1			# How many nodes to run on
 #SBATCH --ntasks=1			# How many tasks per node
 #SBATCH --cpus-per-task=10		# Number of CPUs per task
@@ -50,10 +50,11 @@ cd notebook_split_ood/SubclassOOD/OpenOOD-main/
 
 
 
-
 for i in "" "_1" "_2" "_3" "_4"; do
-    python evaluate_domain_filtering.py --dataset "tissue$i" --training_method base --network dinov2
+    python evaluate_domain_filtering.py --dataset "plant$i" --training_method base --network dinov2
 done
+
+
 
 
 # End time

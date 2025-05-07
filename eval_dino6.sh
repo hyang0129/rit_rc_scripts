@@ -52,7 +52,7 @@ cd notebook_split_ood/SubclassOOD/OpenOOD-main/
 
 
 for i in "" "_1" "_2" "_3" "_4"; do
-    python evaluate_domain_filtering.py --dataset "tissue$i" --training_method base --network dinov2
+    python evaluate_domain_filtering.py --dataset "colon$i" --training_method base --network dinov2
 done
 
 
