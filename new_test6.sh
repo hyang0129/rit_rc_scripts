@@ -34,4 +34,4 @@ spack load /ujqlkat # gcc 13.2
 
 
 echo "Launching Jupyter Server"
-jupyter lab --ip=0.0.0.0 --no-browser --port=8886
+jupyter lab --ip=0.0.0.0 --no-browser --port=8887
