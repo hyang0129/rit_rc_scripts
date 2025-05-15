@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-#SBATCH --job-name=nb8887new		# Name for your job
+#SBATCH --job-name=nb8888new		# Name for your job
 #SBATCH --comment="Testing Job"		# Comment for your job
 
 #SBATCH --account=icmab		# Project account to run your job under
@@ -34,4 +34,4 @@ spack load /ujqlkat # gcc 13.2
 #xcjeomb
 
 echo "Launching Jupyter Server"
-jupyter lab --ip=0.0.0.0 --no-browser --port=8887
+jupyter lab --ip=0.0.0.0 --no-browser --port=8888
