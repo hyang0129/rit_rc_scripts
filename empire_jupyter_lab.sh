@@ -3,8 +3,8 @@
 #SBATCH --job-name=jupyter_empire		# Name for your job
 #SBATCH --comment="Jupyter Lab on Empire AI"	# Comment for your job
 
-#SBATCH --account=your_account_here		# TODO: Update with your Empire AI account
-#SBATCH --partition=gpu				# Partition to run your job on
+#SBATCH --account=rit				# Empire AI account
+#SBATCH --partition=rit				# Partition to run your job on
 
 #SBATCH --output=%x_%j.out			# Output file
 #SBATCH --error=%x_%j.err			# Error file
