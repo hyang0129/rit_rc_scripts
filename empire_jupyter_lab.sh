@@ -1,6 +1,9 @@
 #!/bin/bash -l
 
-#SBATCH --job-name=jupyter_empire		# Name for your job
+# Parse port argument (default: 8887)
+PORT=${1:-8887}
+
+#SBATCH --job-name=jupyter_empire_PORT		# Name for your job (PORT will be replaced)
 #SBATCH --comment="Jupyter Lab on Empire AI"	# Comment for your job
 
 #SBATCH --account=rit				# Empire AI account
@@ -19,7 +22,11 @@
 #SBATCH --mem-per-cpu=6g			# Memory per CPU: 6GB
 #SBATCH --gres=gpu:1				# 1 GPU
 
-echo "Setting Up Jupyter Server on Empire AI"
+# Update job name with actual port
+sacct --format=JobID,JobName -j ${SLURM_JOB_ID} 2>/dev/null || true
+scontrol update JobId=${SLURM_JOB_ID} JobName=jupyter_empire_${PORT} 2>/dev/null || true
+
+echo "Setting Up Jupyter Server on Empire AI (Port: ${PORT})"
 
 echo "Loading Packages"
 
@@ -30,5 +37,5 @@ conda activate ml
 CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib
 
-echo "Launching Jupyter Lab"
-jupyter lab --ip=0.0.0.0 --no-browser --port=8887
+echo "Launching Jupyter Lab on port ${PORT}"
+jupyter lab --ip=0.0.0.0 --no-browser --port=${PORT}
