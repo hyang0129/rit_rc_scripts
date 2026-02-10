@@ -1,8 +1,5 @@
 #!/bin/bash -l
 
-# Parse port argument (default: 8887)
-PORT=${1:-8887}
-
 #SBATCH --job-name=jupyter_empire_PORT		# Name for your job (PORT will be replaced)
 #SBATCH --comment="Jupyter Lab on Empire AI"	# Comment for your job
 
@@ -21,6 +18,9 @@ PORT=${1:-8887}
 #SBATCH --cpus-per-task=16			# Number of CPUs per task
 #SBATCH --mem-per-cpu=6g			# Memory per CPU: 6GB
 #SBATCH --gres=gpu:1				# 1 GPU
+
+# Parse port argument (default: 8887)
+PORT=${1:-8887}
 
 # Update job name with actual port
 sacct --format=JobID,JobName -j ${SLURM_JOB_ID} 2>/dev/null || true
