@@ -15,7 +15,7 @@
 #SBATCH --time=3-00:00:00			# Time limit: 3 days
 #SBATCH --nodes=1				# How many nodes to run on
 #SBATCH --ntasks=1				# How many tasks per node
-#SBATCH --cpus-per-task=16			# Number of CPUs per task
+#SBATCH --cpus-per-task=32			# Number of CPUs per task
 #SBATCH --mem-per-cpu=6g			# Memory per CPU: 6GB
 #SBATCH --gres=gpu:1				# 1 GPU
 
